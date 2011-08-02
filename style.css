@@ -1,0 +1,11 @@
+/*
+Theme Name: cjlarose
+Theme URI: http://cjlarose.com
+Description: Custom theme for the website of Chris LaRose
+Version: 0.1
+Author: Chris LaRose
+Author URI: http://cjlarose.com
+*/
+
+@import "css/blueprint/src/screen.css";
+@import "css/layout.css";
