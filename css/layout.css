@@ -52,6 +52,19 @@ pre {white-space: pre-line;}
     bottom: -26px;
     left: 0;
 }
+
+/* Footer */
+#footer-site-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#footer-site-list li {
+    margin-bottom: 10px;
+}
+#footer-site-list img {
+    float: left;
+}
 #copyright {
     margin-bottom: 4.5em;
 }
@@ -149,13 +162,14 @@ body.home #banner:after, body.home #from-my-blog:after {
     float: right;
     color: #fff;
     position: relative;
-    padding: 0 11px 0 1em;
+    padding: 0 10px 0 1em;
     margin: 0 10px -2px 0;
+    text-align: center;
 }
 .button:after {
     content: url('../images/button-right-2.png');
     position: absolute;
-    padding-left: 11px;
+    right: -10px;
 }
 
 /* Portfolio */
@@ -179,11 +193,8 @@ body.home #banner:after, body.home #from-my-blog:after {
 .container.showgrid {
     background: transparent url('../images/bp40x21.png') repeat scroll 7px top;
 }
-.showgrid * {
+.showgrid #bd, .showgrid #ft, .showgrid #banner, .showgrid #from-my-blog {
     background-image: none !important;
-}
-.showgrid *:before, .showgrid *:after {
-    content: "";
 }
 
 

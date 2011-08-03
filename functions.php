@@ -524,9 +524,10 @@ function pr($args) {
 add_action( 'init', 'create_post_types' );
 function create_post_types() {
 	
-	add_image_size('site-thumbnail', 150, 101, true);
+	add_image_size('site-thumbnail', 150, 116, true);
 	add_image_size('site-medium', 190, 147, true);
 	add_image_size('site-large', 270, 189, true);
+	add_image_size('site-super', 550, 357, true);
 
 	register_post_type('site', array(
 	'label' => 'Sites',

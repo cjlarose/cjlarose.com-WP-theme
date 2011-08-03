@@ -1,5 +1,6 @@
 sizes
 
-thumb     span-4 x 5 rows     150 x 101
-medium    span-5 x 6 rows     190 x 137     7 rows 190 x 147
-large     span-7 x 8 rows     270 x 179     9 rows 270 x 189
+thumb     span-4 x 5 rows    150 x 116 (10px gutter grid)
+medium    span-5 x 7 rows    190 x 147
+large     span-7 x 9 rows    270 x 189
+super     span-14 x 17 rows  550 x 357

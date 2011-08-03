@@ -42,6 +42,26 @@
 		
 		<div class="span-8">
 			<h3>Latest Projects</h3>
+			<?php
+				$post_query = new WP_Query(array(
+				'post_type' => 'site',
+				'posts_per_page' => 4
+			));
+			?>
+			<ul id="footer-site-list">
+			<?php $counter = 0; ?>
+			<?php if ( $post_query->have_posts() ) while ( $post_query->have_posts() ) : $counter++; $post_query->the_post(); ?>
+			    <li class="span-4<?php echo ($counter % 2 == 0)?" last":""; ?>">
+			    
+			    <a href="<?php the_permalink(); ?>">
+				<?php the_post_thumbnail( 'site-thumbnail' ); ?>
+			    </a>
+			    <?php //the_excerpt(); ?>
+			    
+			    </li>
+			<?php endwhile; ?>
+			<?php wp_reset_postdata(); ?>
+			</ul>
 		</div>
 		
 		<div class="span-7 last">
@@ -54,11 +74,11 @@
 		</div>
 		
 		<div class="span-8">
-			<a class="button" href="<?php echo home_url('/blog'); ?>">Portfolio</a>
+			<a class="button" href="<?php echo home_url('/portfolio'); ?>">Portfolio</a>
 		</div>
 		
 		<div class="span-7 last">
-			<a class="button" href="<?php echo home_url('/blog'); ?>">About</a>
+			<a class="button" href="<?php echo home_url('/about-me'); ?>">About</a>
 		</div>
 		
 		

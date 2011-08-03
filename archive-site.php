@@ -17,7 +17,7 @@ get_header(); ?>
     <?php
         $post_query = new WP_Query(array(
         'post_type' => 'site',
-        'posts_per_page' => 5
+        'nopaging' => TRUE
     ));
     ?>
     <ul id="site-list">

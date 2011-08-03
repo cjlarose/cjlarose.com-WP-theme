@@ -65,4 +65,4 @@
 		
 	</div><!-- #hd -->
 	
-	<div id="bd" class="">
+	<div id="bd">
