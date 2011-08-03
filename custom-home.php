@@ -40,9 +40,8 @@ get_header(); ?>
             <article>
             <h3><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyten' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
             
-            <p class="post-meta">
-                <?php echo get_the_date(); ?> | <?php comments_number( 'No comments', '1 comment', '% comments' ); ?>
-            </p>
+            <p class="post-meta"><?php echo get_the_date(); ?> | <?php comments_number( 'No comments', '1 comment', '% comments' ); ?></p>
+            
             <?php the_excerpt(); ?>
             </article>
         

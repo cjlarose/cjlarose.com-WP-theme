@@ -21,8 +21,9 @@ get_header(); ?>
     ));
     ?>
     <ul id="site-list">
-    <?php if ( $post_query->have_posts() ) while ( $post_query->have_posts() ) : $post_query->the_post(); ?>
-        <li class="span-7">
+    <?php $counter = 0; ?>
+    <?php if ( $post_query->have_posts() ) while ( $post_query->have_posts() ) : $counter++; $post_query->the_post(); ?>
+        <li class="span-7<?php echo ($counter % 3 == 0)?" last":""; ?>">
         <h3><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyten' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
         <?php $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full'); ?>
         <a href="<?php echo $large_image_url[0]; ?>" rel="lightbox" title="<?php echo strip_tags(get_the_content()); ?>">
