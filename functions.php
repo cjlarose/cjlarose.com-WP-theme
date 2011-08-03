@@ -430,6 +430,18 @@ function twentyten_widgets_init() {
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
 	) );
+	
+	// Area 7, located on the home page
+	register_sidebar( array(
+		'name' => __( 'Home Widget Area', 'twentyten' ),
+		'id' => 'home-widget-area',
+		'description' => __( 'The home widget area', 'twentyten' ),
+		'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
+		'after_widget' => '</li>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );
+	
 }
 /** Register sidebars by running twentyten_widgets_init() on the widgets_init hook. */
 add_action( 'widgets_init', 'twentyten_widgets_init' );
@@ -497,3 +509,14 @@ function twentyten_posted_in() {
 	);
 }
 endif;
+
+function pr($args) {
+	
+	$args = func_get_args();
+	foreach ($args as $value) {
+		echo "<pre>";
+		print_r($value);
+		echo "</pre>";
+	}
+	
+}
