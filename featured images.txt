@@ -1,0 +1,5 @@
+sizes
+
+thumb     span-4 x 5 rows     150 x 101
+medium    span-5 x 6 rows     190 x 137
+large     span-7 x 8 rows     270 x 179

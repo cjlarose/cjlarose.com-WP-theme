@@ -520,3 +520,49 @@ function pr($args) {
 	}
 	
 }
+
+add_action( 'init', 'create_post_types' );
+function create_post_types() {
+	
+	add_image_size('site-thumbnail', 150, 101, true);
+	add_image_size('site-medium', 190, 137, true);
+	add_image_size('site-large', 270, 179, true);
+
+	register_post_type('site', array(
+	'label' => 'Sites',
+	'description' => '',
+	'public' => true,
+	'show_ui' => true,
+	'show_in_menu' => true,
+	'capability_type' => 'post',
+	'hierarchical' => false,
+	'rewrite' => array('slug' => 'sites'),
+	'query_var' => true,
+	'supports' => array('title','editor','excerpt','trackbacks','custom-fields','comments','revisions','thumbnail','author','page-attributes'),
+	'labels' => array (
+		'name' => 'Sites',
+		'singular_name' => 'Site',
+		'menu_name' => 'Sites',
+		'add_new' => 'Add Site',
+		'add_new_item' => 'Add New Site',
+		'edit' => 'Edit',
+		'edit_item' => 'Edit Site',
+		'new_item' => 'New Site',
+		'view' => 'View Site',
+		'view_item' => 'View Site',
+		'search_items' => 'Search Sites',
+		'not_found' => 'No Sites Found',
+		'not_found_in_trash' => 'No Sites Found in Trash',
+		'parent' => 'Parent Site',
+	),) );
+	//flush_rewrite_rules( false );
+	/*register_taxonomy('bot_type',array (
+	0 => 'bot',
+	),array( 'hierarchical' => true, 'label' => 'Bot Types','show_ui' => true,'query_var' => true,'rewrite' => array('slug' => ''),'singular_label' => 'Bot Type') );
+	
+	register_taxonomy('bot_class',array (
+  0 => 'bot',
+),array( 'hierarchical' => false, 'label' => 'Bot Classes','show_ui' => true,'query_var' => true,'rewrite' => array('slug' => ''),'singular_label' => 'Bot Class') );
+	
+	*/
+}
