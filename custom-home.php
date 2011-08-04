@@ -8,9 +8,9 @@
 
 get_header(); ?>
 
-<div id="banner">
+<div id="banner" class="span-24">
     
-    <div class="span-10 append-1">
+    <div class="span-11 colborder">
     <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
         <?php the_content(); ?>
     
@@ -18,17 +18,17 @@ get_header(); ?>
         <a class="button" href="<?php echo home_url('hire-me'); ?>">Hire me</a>
     </div>
     
-    <div class="span-11 last">
+    <div class="span-12 last">
         <img src="<?php bloginfo('template_url'); ?>/images/amer-pat-preview.jpg" alt="Design thumbnail of the website for the American Patriot Party" />
     </div>
     
 </div>
 
-<div id="from-my-blog" class="span-22">
+<div id="from-my-blog" class="span-24">
     
     <h2>From my blog</h2>
     
-    <div class="span-14 append-1">
+    <div class="span-15 append-1">
         <?php
             $post_query = new WP_Query(array(
             'post_type' => 'post',
@@ -49,7 +49,7 @@ get_header(); ?>
         <?php wp_reset_postdata(); ?>
     </div>
     
-    <div class="span-7 last">
+    <div class="span-8 last">
         <?php get_sidebar('home'); ?>
     </div>
     

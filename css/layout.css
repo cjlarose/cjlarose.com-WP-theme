@@ -3,7 +3,6 @@
 /* ----------------------------------------- */
 
 /* Basic Rules */
-
 body {
     font-size: 87.5%;
     line-height: 1.5;
@@ -21,23 +20,22 @@ a {text-decoration: none;}
 pre {white-space: pre-line;}
 div {position: relative;}
 
+
+
 /* Basic Layout */
 .container {
     width: 964px;
 }
-#hd, #bd, #ft {
-    padding: 0 47px 1.5em;
-    width: 870px;
-}
 #hd {
-    margin-bottom: 0;
+    margin: 1.5em 0;
     height: 6em;
+}
+#hd, #bd, #ft {
+    padding: 0 43px;
 }
 #bd, #ft {
     background: transparent url('../images/main-body.png') repeat-y scroll left top;
-    margin: 1.5em 0 42px;
-    position: relative;
-    float: left;
+    margin-bottom: 4.5em;
     padding-top: 1.5em;
 }
 #bd:before, #ft:before {
@@ -46,23 +44,21 @@ div {position: relative;}
     top: -21px;
     left: 0;
 }
-
 #bd:after, #ft:after {
     content: url('../images/rounded-bottom.png');
     position: absolute;
-    bottom: -26px;
+    bottom: -34px;
     left: 0;
 }
 
 
 
 /* Branding */
-#hd {
-    margin-top: 3em;
-}
 #branding p {
     display: none;
 }
+
+
 
 /* Navigation */
 #access {
@@ -119,6 +115,14 @@ div {position: relative;}
 }
 #ft .button {
     float: right;
+    width: 100px;
+}
+#ft .span-24 > div {
+    padding-bottom: 200px;
+    margin-bottom: -200px;
+}
+#ft .span-24 {
+    overflow: hidden;
 }
 
 
@@ -128,17 +132,14 @@ body.home #bd {
     background: none;
     padding: 0;
     margin: 0;
-    width: 964px;
 }
 body.home #bd:before, body.home #bd:after {
     content: "";
 }
 body.home #banner, body.home #from-my-blog {
     background: transparent url('../images/main-body.png') repeat-y scroll left top;
-    margin: 1.5em 0 42px;
-    position: relative;
-    float: left;
-    padding: 1.5em 47px;
+    margin-bottom: 4.5em;
+    padding: 1.5em 43px 0;
 }
 body.home #banner:before, body.home #from-my-blog:before {
     content: url('../images/rounded-top.png');
@@ -149,7 +150,7 @@ body.home #banner:before, body.home #from-my-blog:before {
 body.home #banner:after, body.home #from-my-blog:after {
     content: url('../images/rounded-bottom.png');
     position: absolute;
-    bottom: -26px;
+    bottom: -34px;
     left: 0;
 }
 #banner h1 {
@@ -172,19 +173,19 @@ body.home #banner:after, body.home #from-my-blog:after {
 
 /* Button */
 .button {
-    background: transparent url('../images/button-left-2.png') repeat-x scroll left top;
+    background: transparent url('../images/button-left.png') repeat-x scroll left top;
     line-height: 44px;
     font-size: 1.5em;
     display: inline-block;
     
     color: #fff;
     position: relative;
-    padding: 0 10px 0 1em;
-    margin: 0 10px -2px 0;
+    padding: 0 10px 0 19px;
+    margin: 0 9px 19px 0;
     text-align: center;
 }
 .button:after {
-    content: url('../images/button-right-2.png');
+    content: url('../images/button-right.png');
     position: absolute;
     right: -10px;
 }
@@ -199,10 +200,6 @@ body.home #banner:after, body.home #from-my-blog:after {
 }
 #site-list li {
     margin-bottom: 1.5em;
-    margin-right: 30px;
-}
-#site-list li.last {
-    margin-right: 0;
 }
 #site-list img {
     float: left;
@@ -211,14 +208,14 @@ body.home #banner:after, body.home #from-my-blog:after {
 
 /* Single-site */
 #visit-site {
-   width: 109px;
+   width: 98px;
 }
 
 
 
 /* Vertical Ryythm Testing */
 .container.showgrid {
-    background: transparent url('../images/bp40x21.png') repeat scroll 7px top;
+    background: transparent url('blueprint/src/grid-878.png') repeat scroll 43px top;
 }
 .showgrid #bd, .showgrid #ft, .showgrid #banner, .showgrid #from-my-blog {
     background-image: none !important;

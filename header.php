@@ -47,7 +47,7 @@
 <body <?php body_class(); ?>>
 <div id="wrap" class="container">
 	
-	<div id="hd" class="clearfix">
+	<div id="hd" class="span-24">
 		
 		<div id="branding" class="span-8">
 			<h1>
@@ -58,11 +58,11 @@
 			<p><?php bloginfo( 'description' ); ?></p>
 		</div>
 	
-		<div id="access" role="navigation" class="span-14 last">
+		<div id="access" role="navigation" class="span-16 last">
 			<?php /* Our navigation menu.  If one isn't filled out, wp_nav_menu falls back to wp_page_menu.  The menu assiged to the primary position is the one used.  If none is assigned, the menu with the lowest ID is used.  */ ?>
 			<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?>
 		</div><!-- #access -->
 		
 	</div><!-- #hd -->
 	
-	<div id="bd">
+	<div id="bd" class="span-24">

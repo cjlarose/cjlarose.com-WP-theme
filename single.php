@@ -8,7 +8,7 @@
  */
 
 get_header(); ?>
-<div class="span-14 append-1">
+<div class="span-15 append-1">
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
 					<?php previous_post_link( '%link', '' . _x( '&larr;', 'Previous post link', 'twentyten' ) . ' %title' ); ?>
@@ -41,7 +41,7 @@ get_header(); ?>
 <?php endwhile; // end of the loop. ?>
 </div>
 
-<div class="span-7 last">
+<div class="span-8 last">
 <?php get_sidebar(); ?>
 </div>
 <?php get_footer(); ?>

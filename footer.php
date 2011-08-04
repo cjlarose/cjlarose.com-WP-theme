@@ -12,15 +12,16 @@
 ?>
 	</div><!-- #bd -->
 	
-	<div id="ft" class="">
+	<div id="ft" class="span-24">
 <?php
 	/* A sidebar in the footer? Yep. You can can customize
 	 * your footer with four columns of widgets.
 	 */
 	//get_sidebar( 'footer' );
 ?>
-			
-		<div class="span-7">
+	<div class="span-24">
+		
+		<div class="span-7 colborder">
 			<h3>Recent Posts</h3>
 			<?php
 			$bot_query = new WP_Query( array(
@@ -40,7 +41,7 @@
 			<?php wp_reset_postdata(); ?>
 		</div>
 		
-		<div class="span-8">
+		<div class="span-8 colborder">
 			<h3>Latest Projects</h3>
 			<?php
 				$post_query = new WP_Query(array(
@@ -69,11 +70,13 @@
 			<p>Nam fermentum cursus urna vitae euismod. Maecenas non urna sit amet tellus ultricies tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse euismod commodo nibh ut ultrices. In eu purus non lacus ornare porttitor ac at justo. Aenean nec enim est, id ultrices orci. In rutrum urna lectus. </p>
 		</div>
 		
-		<div class="span-7">
+	</div>
+		
+		<div class="span-7 colborder">
 			<a class="button" href="<?php echo home_url('/blog'); ?>">Blog</a>
 		</div>
 		
-		<div class="span-8">
+		<div class="span-8 colborder">
 			<a class="button" href="<?php echo home_url('/portfolio'); ?>">Portfolio</a>
 		</div>
 		
