@@ -1,8 +1,8 @@
 <?php
 /**
- * Template Name: Site Archive
+ * Template Name: Project Archive
  * 
- * A custom home template
+ * Portfolio template
  *
  */
 
@@ -17,11 +17,11 @@ get_header(); ?>
     <?php
     
         $post_query = new WP_Query(array(
-        'post_type' => 'site',
+        'post_type' => 'project',
         'nopaging' => TRUE
     ));
     ?>
-    <ul id="site-list">
+    <ul id="project-list">
     <?php $counter = 0; ?>
     <?php if ( $post_query->have_posts() ) while ( $post_query->have_posts() ) : $counter++; $post_query->the_post(); ?>
     <?php
@@ -32,7 +32,7 @@ get_header(); ?>
         <h3><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyten' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
 
         <a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyten' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark">
-            <?php the_post_thumbnail( 'site-large' ); ?>
+            <?php the_post_thumbnail( 'project-large' ); ?>
         </a>
         
         <?php //the_excerpt(); ?>

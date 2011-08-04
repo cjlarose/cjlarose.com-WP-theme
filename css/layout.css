@@ -99,15 +99,15 @@ div {position: relative;}
 
 
 /* Footer */
-#footer-site-list {
+#footer-project-list {
     margin: 0;
     padding: 0;
     list-style: none;
 }
-#footer-site-list li {
+#footer-project-list li {
     margin-bottom: 10px;
 }
-#footer-site-list img {
+#footer-project-list img {
     float: left;
 }
 #copyright {
@@ -193,21 +193,21 @@ body.home #banner:after, body.home #from-my-blog:after {
 
 
 /* Portfolio */
-#site-list {
+#project-list {
     list-style: none;
     margin: 0;
     padding: 0;
 }
-#site-list li {
+#project-list li {
     margin-bottom: 1.5em;
 }
-#site-list img {
+#project-list img {
     float: left;
 }
 
 
-/* Single-site */
-#visit-site {
+/* Single-project */
+#visit-project {
    width: 98px;
 }
 

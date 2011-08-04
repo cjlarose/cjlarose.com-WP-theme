@@ -164,7 +164,7 @@ endif;
 /**
  * Makes some changes to the <title> tag, by filtering the output of wp_title().
  *
- * If we have a site description and we're viewing the home page or a blog posts
+ * If we have a project description and we're viewing the home page or a blog posts
  * page (when using a static front page), then we will add the site description.
  *
  * If we're viewing a search result, then we're going to recreate the title entirely.
@@ -524,38 +524,39 @@ function pr($args) {
 add_action( 'init', 'create_post_types' );
 function create_post_types() {
 	
-	add_image_size('site-thumbnail', 138, 95, true);
-	add_image_size('site-medium', 212, 147, true);
-	add_image_size('site-large', 286, 189, true);
-	add_image_size('site-super', 545, 357, true);
+	add_image_size('project-thumbnail', 138, 95, true);
+	add_image_size('project-medium', 212, 147, true);
+	add_image_size('project-large', 286, 189, true);
+	add_image_size('project-super', 545, 357, true);
 
-	register_post_type('site', array(
-	'label' => 'Sites',
+	register_post_type('project', array(
+	'label' => 'Projects',
 	'description' => '',
 	'public' => true,
 	'show_ui' => true,
 	'show_in_menu' => true,
 	'capability_type' => 'post',
 	'hierarchical' => false,
-	'rewrite' => array('slug' => 'sites'),
+	'rewrite' => array('slug' => 'projects'),
 	'query_var' => true,
 	'supports' => array('title','editor','excerpt','trackbacks','custom-fields','comments','revisions','thumbnail','author','page-attributes'),
 	'labels' => array (
-		'name' => 'Sites',
-		'singular_name' => 'Site',
-		'menu_name' => 'Sites',
-		'add_new' => 'Add Site',
-		'add_new_item' => 'Add New Site',
+		'name' => 'Projects',
+		'singular_name' => 'Project',
+		'menu_name' => 'Projects',
+		'add_new' => 'Add Project',
+		'add_new_item' => 'Add New Project',
 		'edit' => 'Edit',
-		'edit_item' => 'Edit Site',
-		'new_item' => 'New Site',
-		'view' => 'View Site',
-		'view_item' => 'View Site',
-		'search_items' => 'Search Sites',
-		'not_found' => 'No Sites Found',
-		'not_found_in_trash' => 'No Sites Found in Trash',
-		'parent' => 'Parent Site',
+		'edit_item' => 'Edit Project',
+		'new_item' => 'New Project',
+		'view' => 'View Project',
+		'view_item' => 'View Project',
+		'search_items' => 'Search Projects',
+		'not_found' => 'No Projects Found',
+		'not_found_in_trash' => 'No Projects Found in Trash',
+		'parent' => 'Parent Project',
 	),) );
+	
 	//flush_rewrite_rules( false );
 	/*register_taxonomy('bot_type',array (
 	0 => 'bot',

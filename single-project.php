@@ -21,7 +21,7 @@ get_header(); ?>
 		<h1><?php the_title(); ?></h1>
 	</div>
 	<div class="span-4 last">
-		<a href="<?php echo $post_url; ?>" class="button" id="visit-site">Visit Site</a>
+		<a href="<?php echo $post_url; ?>" class="button" id="visit-project">Visit Site</a>
 	</div>
 </div>
 
@@ -32,7 +32,7 @@ get_header(); ?>
 						<?php global $more; $more = 0; ?>
 	<?php $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full'); ?>
 	<a href="<?php echo $large_image_url[0]; ?>" rel="lightbox" title="<?php echo get_the_content(FALSE); ?>">
-            <?php the_post_thumbnail( 'site-super' ); ?>
+            <?php the_post_thumbnail( 'project-super' ); ?>
         </a>
 	
 	
