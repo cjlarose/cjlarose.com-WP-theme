@@ -525,7 +525,7 @@ add_action( 'init', 'create_post_types' );
 function create_post_types() {
 	
 	add_image_size('site-thumbnail', 138, 95, true);
-	add_image_size('site-medium', 175, 126, true);
+	add_image_size('site-medium', 212, 147, true);
 	add_image_size('site-large', 286, 189, true);
 	add_image_size('site-super', 545, 357, true);
 

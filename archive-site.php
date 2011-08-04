@@ -30,11 +30,7 @@ get_header(); ?>
     ?>
         <li class="span-8<?php echo ($counter % 3 == 0)?" last":""; ?>">
         <h3><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyten' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
-        <?php $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full'); ?>
-        <?php //pr(get_the_content(FALSE)); ?>
-        <!--<a href="<?php echo $large_image_url[0]; ?>" rel="lightbox" title="<?php echo get_the_content(FALSE); ?>">
-            <?php the_post_thumbnail( 'site-large' ); ?>
-        </a>-->
+
         <a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyten' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark">
             <?php the_post_thumbnail( 'site-large' ); ?>
         </a>
