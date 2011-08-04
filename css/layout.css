@@ -173,8 +173,8 @@ body.home #banner:after, body.home #from-my-blog:after {
 
 /* Button */
 .button {
-    background: transparent url('../images/button-left.png') repeat-x scroll left top;
-    line-height: 44px;
+    
+    
     font-size: 1.5em;
     display: inline-block;
     
@@ -184,10 +184,40 @@ body.home #banner:after, body.home #from-my-blog:after {
     margin: 0 9px 19px 0;
     text-align: center;
 }
-.button:after {
+a.button {
+    background: transparent url('../images/button-left.png') repeat-x scroll left top;
+    line-height: 44px;
+}
+a.button:after {
     content: url('../images/button-right.png');
     position: absolute;
     right: -10px;
+}
+input[type=submit] { 
+	position: relative;
+	border: 0; 
+	padding: 0;
+	cursor: pointer;
+	overflow: visible; /* removes extra side padding in IE */
+}
+
+input[type=submit]::-moz-focus-inner {
+	border: none;  /* overrides extra padding in Firefox */
+}
+input[type=submit].button {
+    background: transparent url('../images/form-button.png') no-repeat scroll left top;
+    padding: 9px;
+    margin: 0 9px -2px 0;
+    line-height: 26px;
+    width: 139px;
+}
+
+/* Hire me form */
+#wpcf7-f1-p10-o1 input.text {
+    width: 235px;
+}
+#wpcf7-f1-p10-o1 textarea {
+    height: 98px;
 }
 
 
