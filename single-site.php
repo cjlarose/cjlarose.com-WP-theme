@@ -11,19 +11,33 @@ get_header(); ?>
 <div class="span-14 append-1">
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
-					<?php previous_post_link( '%link', '' . _x( '&larr;', 'Previous post link', 'twentyten' ) . ' %title' ); ?>
-					<?php next_post_link( '%link', '%title ' . _x( '&rarr;', 'Next post link', 'twentyten' ) . '' ); ?>
+					<?php //previous_post_link( '%link', '' . _x( '&larr;', 'Previous post link', 'twentyten' ) . ' %title' ); ?>
+					<?php //next_post_link( '%link', '%title ' . _x( '&rarr;', 'Next post link', 'twentyten' ) . '' ); ?>
 
-					<h1><?php the_title(); ?></h1>
+<?php if ($post_url = get_post_meta($post->ID, 'url', true)): ?>
 
+<div class="span-14 last">
+	<div class="span-10">
+		<h1><?php the_title(); ?></h1>
+	</div>
+	<div class="span-4 last">
+		<a href="<?php echo $post_url; ?>" class="button" id="visit-site">Visit Site</a>
+	</div>
+</div>
+
+<?php else: ?>
+<h1><?php the_title(); ?></h1>
+<?php endif; ?>
 						<?php twentyten_posted_on(); ?>
-						
+						<?php global $more; $more = 0; ?>
 	<?php $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full'); ?>
-	<a href="<?php echo $large_image_url[0]; ?>" rel="lightbox" title="<?php echo strip_tags(get_the_content()); ?>">
+	<a href="<?php echo $large_image_url[0]; ?>" rel="lightbox" title="<?php echo get_the_content(FALSE); ?>">
             <?php the_post_thumbnail( 'site-super' ); ?>
         </a>
 	
-						<?php the_content(); ?>
+	
+						<?php $more = 1; ?>
+						<?php the_content('', TRUE); ?>
 						<?php wp_link_pages( array( 'before' => '' . __( 'Pages:', 'twentyten' ), 'after' => '' ) ); ?>
 
 <?php if ( get_the_author_meta( 'description' ) ) : // If a user has filled out their description, show a bio on their entries  ?>

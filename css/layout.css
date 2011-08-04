@@ -19,6 +19,7 @@ h5 {font-size:1em; line-height: 1.5; font-weight:bold; margin-bottom: 0;}
 
 a {text-decoration: none;}
 pre {white-space: pre-line;}
+div {position: relative;}
 
 /* Basic Layout */
 .container {
@@ -53,6 +54,54 @@ pre {white-space: pre-line;}
     left: 0;
 }
 
+
+
+/* Branding */
+#hd {
+    margin-top: 3em;
+}
+#branding p {
+    display: none;
+}
+
+/* Navigation */
+#access {
+    margin-top: 1.5em;
+}
+#access ul {
+    float: right;
+    list-style: none;
+    margin: 0;
+}
+#access li {
+    float: left;
+}
+#access li:after {
+    content: "|";
+    padding: 0 1em;
+}
+#access li:last-child:after {
+    content: none;
+    padding: 0;
+}
+
+
+
+/* Sidebar */
+.xoxo {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.widget-container {
+    margin-bottom: 1.5em;
+}
+.tagcloud a {
+    font-size: inherit !important;
+}
+
+
+
 /* Footer */
 #footer-site-list {
     margin: 0;
@@ -68,6 +117,11 @@ pre {white-space: pre-line;}
 #copyright {
     margin-bottom: 4.5em;
 }
+#ft .button {
+    float: right;
+}
+
+
 
 /* Home */
 body.home #bd {
@@ -104,6 +158,9 @@ body.home #banner:after, body.home #from-my-blog:after {
 #banner img {
     float: left;
 }
+#banner .button {
+    float: right;
+}
 #from-my-blog article h3 {
     margin-bottom: 0;
 }
@@ -111,47 +168,7 @@ body.home #banner:after, body.home #from-my-blog:after {
     color: #666;
 }
 
-/* Sidebar */
-.xoxo {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-.widget-container {
-    margin-bottom: 1.5em;
-}
-.tagcloud a {
-    font-size: inherit !important;
-}
 
-/* Branding */
-#hd {
-    margin-top: 3em;
-}
-#branding p {
-    display: none;
-}
-
-/* Navigation */
-#access {
-    margin-top: 1.5em;
-}
-#access ul {
-    float: right;
-    list-style: none;
-    margin: 0;
-}
-#access li {
-    float: left;
-}
-#access li:after {
-    content: "|";
-    padding: 0 1em;
-}
-#access li:last-child:after {
-    content: none;
-    padding: 0;
-}
 
 /* Button */
 .button {
@@ -159,7 +176,7 @@ body.home #banner:after, body.home #from-my-blog:after {
     line-height: 44px;
     font-size: 1.5em;
     display: inline-block;
-    float: right;
+    
     color: #fff;
     position: relative;
     padding: 0 10px 0 1em;
@@ -171,6 +188,8 @@ body.home #banner:after, body.home #from-my-blog:after {
     position: absolute;
     right: -10px;
 }
+
+
 
 /* Portfolio */
 #site-list {
@@ -188,6 +207,14 @@ body.home #banner:after, body.home #from-my-blog:after {
 #site-list img {
     float: left;
 }
+
+
+/* Single-site */
+#visit-site {
+   width: 109px;
+}
+
+
 
 /* Vertical Ryythm Testing */
 .container.showgrid {
