@@ -9,6 +9,7 @@
 
 get_header(); ?>
 <div class="span-15 append-1">
+	<article class="<?php echo get_post_type(); ?>">
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
 					<?php //previous_post_link( '%link', '' . _x( '&larr;', 'Previous post link', 'twentyten' ) . ' %title' ); ?>
@@ -16,22 +17,24 @@ get_header(); ?>
 
 <?php if ($post_url = get_post_meta($post->ID, 'url', true)): ?>
 
-<div class="span-15 last">
-	<div class="span-11">
-		<h1><?php the_title(); ?></h1>
+	<div class="span-15 last">
+		<div class="span-11">
+			<h1><?php the_title(); ?></h1>
+		</div>
+		<div class="span-4 last">
+			<a href="<?php echo $post_url; ?>" class="button" id="visit-project">Visit Site</a>
+		</div>
 	</div>
-	<div class="span-4 last">
-		<a href="<?php echo $post_url; ?>" class="button" id="visit-project">Visit Site</a>
-	</div>
-</div>
 
 <?php else: ?>
-<h1><?php the_title(); ?></h1>
+	<h1><?php the_title(); ?></h1>
 <?php endif; ?>
-						<?php twentyten_posted_on(); ?>
-						<?php global $more; $more = 0; ?>
+
+	<p class="post-meta"><?php echo get_the_date(); ?> | <?php comments_number( 'No comments', '1 comment', '% comments' ); ?></p>
+	
+	<?php global $more; $more = 0; ?>
 	<?php $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full'); ?>
-	<a href="<?php echo $large_image_url[0]; ?>" rel="lightbox" title="<?php echo get_the_content(FALSE); ?>">
+	<a href="<?php echo $large_image_url[0]; ?>" rel="lightbox">
             <?php the_post_thumbnail( 'project-super' ); ?>
         </a>
 	
@@ -54,7 +57,7 @@ get_header(); ?>
 
 				<?php previous_post_link( '%link', '' . _x( '&larr;', 'Previous post link', 'twentyten' ) . ' %title' ); ?>
 				<?php next_post_link( '%link', '%title ' . _x( '&rarr;', 'Next post link', 'twentyten' ) . '' ); ?>
-
+	</article>
 				<?php comments_template( '', true ); ?>
 
 <?php endwhile; // end of the loop. ?>

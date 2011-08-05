@@ -9,14 +9,15 @@
 
 get_header(); ?>
 <div class="span-15 append-1">
+	
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-
-					<?php previous_post_link( '%link', '' . _x( '&larr;', 'Previous post link', 'twentyten' ) . ' %title' ); ?>
-					<?php next_post_link( '%link', '%title ' . _x( '&rarr;', 'Next post link', 'twentyten' ) . '' ); ?>
-
-					<h1><?php the_title(); ?></h1>
-
-						<?php twentyten_posted_on(); ?>
+	<article class="<?php echo get_post_type(); ?>">
+					<?php //previous_post_link( '%link', '' . _x( '&larr;', 'Previous post link', 'twentyten' ) . ' %title' ); ?>
+					<?php //next_post_link( '%link', '%title ' . _x( '&rarr;', 'Next post link', 'twentyten' ) . '' ); ?>
+					
+	<h1><?php the_title(); ?></h1>
+	<p class="post-meta"><?php echo get_the_date(); ?> | <?php comments_number( 'No comments', '1 comment', '% comments' ); ?></p>
+						<?php //twentyten_posted_on(); ?>
 
 						<?php the_content(); ?>
 						<?php wp_link_pages( array( 'before' => '' . __( 'Pages:', 'twentyten' ), 'after' => '' ) ); ?>
@@ -37,8 +38,9 @@ get_header(); ?>
 				<?php next_post_link( '%link', '%title ' . _x( '&rarr;', 'Next post link', 'twentyten' ) . '' ); ?>
 
 				<?php comments_template( '', true ); ?>
-
+	</article>
 <?php endwhile; // end of the loop. ?>
+	
 </div>
 
 <div class="span-8 last">

@@ -15,13 +15,13 @@
 get_header(); ?>
 <div class="span-15 append-1">
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-<article>
+<article class="<?php echo get_post_type(); ?>">
 					<?php if ( is_front_page() ) { ?>
 						<h2><?php the_title(); ?></h2>
 					<?php } else { ?>	
 						<h1><?php the_title(); ?></h1>
 					<?php } ?>				
-
+<p class="post-meta"><?php echo get_the_date(); ?> | <?php comments_number( 'No comments', '1 comment', '% comments' ); ?></p>
 						<?php the_content(); ?>
 						<?php wp_link_pages( array( 'before' => '' . __( 'Pages:', 'twentyten' ), 'after' => '' ) ); ?>
 						<p><?php edit_post_link( __( 'Edit', 'twentyten' ), '', '' ); ?></p>
