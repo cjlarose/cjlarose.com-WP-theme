@@ -96,6 +96,19 @@ div {position: relative;}
     font-size: inherit !important;
 }
 
+/* Search form */
+#search-form input.text {
+    width: 125px;
+}
+#search-submit {
+    background: transparent url('../images/button-28.png') no-repeat scroll left top;
+    padding: 6px 6px 8px;
+    color: #fff;
+    font-size: 14px;
+    margin-top: 9px;
+    float: right;
+}
+
 
 
 /* Footer */
@@ -165,8 +178,15 @@ body.home #banner:after, body.home #from-my-blog:after {
 #from-my-blog article h3 {
     margin-bottom: 0;
 }
-#from-my-blog .post-meta {
+
+
+
+/* Post pages */
+.post-meta {
     color: #666;
+}
+body.search-results article h2 {
+    margin-bottom: 0;
 }
 
 

@@ -8,7 +8,7 @@
  */
 
 get_header(); ?>
-
+<div class="span-15 append-1">
 <?php if ( have_posts() ) : ?>
 				<h1><?php printf( __( 'Search Results for: %s', 'twentyten' ), '' . get_search_query() . '' ); ?></h1>
 				<?php
@@ -21,8 +21,10 @@ get_header(); ?>
 <?php else : ?>
 					<h2><?php _e( 'Nothing Found', 'twentyten' ); ?></h2>
 					<p><?php _e( 'Sorry, but nothing matched your search criteria. Please try again with some different keywords.', 'twentyten' ); ?></p>
-					<?php get_search_form(); ?>
+					<?php //get_search_form(); ?>
 <?php endif; ?>
-
+</div>
+<div class="span-8 last">
 <?php get_sidebar(); ?>
+</div>
 <?php get_footer(); ?>
