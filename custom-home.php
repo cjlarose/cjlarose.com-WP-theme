@@ -19,7 +19,9 @@ get_header(); ?>
     </div>
     
     <div class="span-12 last">
-        <img src="<?php bloginfo('template_url'); ?>/images/amer-pat-preview.jpg" alt="Design thumbnail of the website for the American Patriot Party" />
+        <a href="http://localhost/wordpress/cjlarose/portfolio/">
+            <img src="<?php bloginfo('template_url'); ?>/images/amer-pat-preview.jpg" alt="Design thumbnail of the website for the American Patriot Party" />
+        </a>
     </div>
     
 </div>
@@ -30,9 +32,9 @@ get_header(); ?>
     
     <div class="span-15 append-1">
         <?php
-            $post_query = new WP_Query(array(
+        $post_query = new WP_Query(array(
             'post_type' => 'post',
-            'posts_per_page' => 5
+            'posts_per_page' => 3
         ));
         ?>
         

@@ -64,6 +64,6 @@ get_header(); ?>
 </div>
 
 <div class="span-8 last">
-<?php get_sidebar(); ?>
+<?php get_sidebar('project'); ?>
 </div>
 <?php get_footer(); ?>
