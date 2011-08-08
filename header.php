@@ -47,18 +47,18 @@
 <body <?php body_class(); ?>>
 <div id="wrap" class="container">
 	
-	<div id="hd" class="span-24">
+	<div id="hd">
 		
-		<div id="branding" class="span-8">
+		<div id="branding">
 			<h1>
 				<a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-					<img alt="<?php bloginfo( 'name' ); ?>" src="<?php bloginfo('template_url'); ?>/images/logo.png" />
+					<?php bloginfo( 'name' ); ?>
 				</a>
 			</h1>
 			<p><?php bloginfo( 'description' ); ?></p>
 		</div>
 	
-		<div id="access" role="navigation" class="span-16 last">
+		<div id="access" role="navigation">
 			<?php /* Our navigation menu.  If one isn't filled out, wp_nav_menu falls back to wp_page_menu.  The menu assiged to the primary position is the one used.  If none is assigned, the menu with the lowest ID is used.  */ ?>
 			<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?>
 		</div><!-- #access -->

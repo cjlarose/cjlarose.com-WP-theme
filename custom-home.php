@@ -25,7 +25,7 @@ get_header(); ?>
     </div>
     
 </div>
-
+<hr />
 <div id="from-my-blog" class="span-24">
     
     <h2>From my blog</h2>

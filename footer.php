@@ -21,8 +21,8 @@
 ?>
 	<div class="span-24">
 		
-		<div class="span-7 colborder">
-			<h3>Recent Posts</h3>
+		<div class="span-7 append-1">
+			<h3><a href="<?php echo home_url('/blog'); ?>">Recent Posts</a></h3>
 			<?php
 			$bot_query = new WP_Query( array(
 			    'post_type' => 'post',
@@ -41,8 +41,8 @@
 			<?php wp_reset_postdata(); ?>
 		</div>
 		
-		<div class="span-8 colborder">
-			<h3>Latest Projects</h3>
+		<div class="span-8 append-1">
+			<h3><a href="<?php echo home_url('/portfolio'); ?>">Latest Projects</a></h3>
 			<?php
 				$post_query = new WP_Query(array(
 				'post_type' => 'project',
@@ -66,17 +66,17 @@
 		</div>
 		
 		<div class="span-7 last">
-			<h3>About Chris</h3>
+			<h3><a href="<?php echo home_url('/about-me'); ?>">About Chris</a></h3>
 			<p>Nam fermentum cursus urna vitae euismod. Maecenas non urna sit amet tellus ultricies tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse euismod commodo nibh ut ultrices. In eu purus non lacus ornare porttitor ac at justo. Aenean nec enim est, id ultrices orci. In rutrum urna lectus. </p>
 		</div>
 		
 	</div>
 		
-		<div class="span-7 colborder">
+		<div class="span-7 append-1">
 			<a class="button" href="<?php echo home_url('/blog'); ?>">Blog</a>
 		</div>
 		
-		<div class="span-8 colborder">
+		<div class="span-8 append-1">
 			<a class="button" href="<?php echo home_url('/portfolio'); ?>">Portfolio</a>
 		</div>
 		
@@ -84,21 +84,14 @@
 			<a class="button" href="<?php echo home_url('/about-me'); ?>">About</a>
 		</div>
 		
-		
-		
-<?php
-	/* Always have wp_footer() just before the closing </body>
-	 * tag of your theme, or you will break many plugins, which
-	 * generally use this hook to reference JavaScript files.
-	 */
-
-	wp_footer();
-?>
-	</div><!-- #ft -->
-	<p id="copyright" class="prepend-1 append-1">
+	<p id="copyright" class="span-24">
 		<a href="<?php echo home_url( '/' ) ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
 		<a href="http://wordpress.org/" title="Semantic Personal Publishing Platform" rel="generator">Proudly powered by WordPress</a>
-	</p>
+	</p>	
+		
+	</div><!-- #ft -->
+	
 </div><!-- #wrap -->
+<?php wp_footer(); ?>
 </body>
 </html>
