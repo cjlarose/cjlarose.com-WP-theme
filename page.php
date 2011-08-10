@@ -23,11 +23,13 @@ get_header(); ?>
 					<?php } ?>				
 
 						<?php the_content(); ?>
+<p>
 						<?php wp_link_pages( array( 'before' => '' . __( 'Pages:', 'twentyten' ), 'after' => '' ) ); ?>
 						<?php edit_post_link( __( 'Edit', 'twentyten' ), '', '' ); ?>
-
+</p>
+<section id="comments">
 				<?php comments_template( '', true ); ?>
-
+</section>
 <?php endwhile; ?>
 
 </div>
