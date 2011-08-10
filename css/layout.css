@@ -280,6 +280,7 @@ input[type=submit].button {
     font-weight: normal;
     position: relative;
     overflow: hidden;
+    margin-bottom: 1.5em;
 }
 #website-type input {
     margin: 5px 0 0 0;
