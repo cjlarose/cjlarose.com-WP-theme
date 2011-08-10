@@ -53,7 +53,7 @@ div {position: relative;}
     padding: 0 36px;
 }
 #bd, #ft {
-    margin-bottom: 4.5em;
+    margin-bottom: 3em;
     padding-top: 1.5em;
 }
 
@@ -185,7 +185,7 @@ body.home #bd {
     margin: 0;
 }
 body.home #banner, body.home #from-my-blog {
-    margin-bottom: 4.5em;
+    margin-bottom: 3em;
     padding: 1.5em 36px 0;
 }
 #banner h1 {
@@ -269,25 +269,27 @@ input[type=submit].button {
 #wpcf7-f1-p10-o1 textarea {
     height: 98px;
 }
-#wpcf7-f1-p10-o1 #website-type label {
-    font-weight: normal;
+#wpcf7-f1-p10-o1 #url {
+    width: 531px;
+}
+#website-type > span {
+    margin-left: 0;
+}
+#website-type label {
     display: block;
-}
-label[for=basic], label[for=blog], label[for=full] {
+    font-weight: normal;
     position: relative;
-    padding-left: 1.5em;
+    overflow: hidden;
 }
-#basic, #blog, #full {
+#website-type input {
+    margin: 5px 0 0 0;
     position: absolute;
     top: 0;
     left: 0;
-    margin-left: 0;
 }
-#wpcf7-f1-p10-o1 p.description {
-    margin-left: 1.5em;
-}
-#wpcf7-f1-p10-o1 #url {
-    width: 531px;
+#website-type label span {
+    float: right;
+    width: 525px;
 }
 
 
