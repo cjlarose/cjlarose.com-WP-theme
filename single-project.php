@@ -32,14 +32,12 @@ get_header(); ?>
 
 	<p class="post-meta"><?php echo get_the_date(); ?> | <?php comments_number( 'No comments', '1 comment', '% comments' ); ?></p>
 	
-	<?php global $more; $more = 0; ?>
 	<?php $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full'); ?>
 	<a href="<?php echo $large_image_url[0]; ?>" rel="lightbox">
             <?php the_post_thumbnail( 'project-super' ); ?>
         </a>
 	
 	
-						<?php $more = 1; ?>
 						<?php the_content('', TRUE); ?>
 						<?php wp_link_pages( array( 'before' => '' . __( 'Pages:', 'twentyten' ), 'after' => '' ) ); ?>
 
@@ -51,14 +49,19 @@ get_header(); ?>
 								<?php printf( __( 'View all posts by %s &rarr;', 'twentyten' ), get_the_author() ); ?>
 							</a>
 <?php endif; ?>
-
+<p>
 						<?php twentyten_posted_in(); ?>
 						<?php edit_post_link( __( 'Edit', 'twentyten' ), '', '' ); ?>
-
+</p>
+<p class="post-nav">
 				<?php previous_post_link( '%link', '' . _x( '&larr;', 'Previous post link', 'twentyten' ) . ' %title' ); ?>
 				<?php next_post_link( '%link', '%title ' . _x( '&rarr;', 'Next post link', 'twentyten' ) . '' ); ?>
+</p>
+	<section id="comments">
+		<?php comments_template( '', true ); ?>
+	</section>
 	</article>
-				<?php comments_template( '', true ); ?>
+				
 
 <?php endwhile; // end of the loop. ?>
 </div>

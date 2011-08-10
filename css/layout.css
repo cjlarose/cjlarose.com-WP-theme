@@ -214,11 +214,56 @@ body.home hr {
 body.search-results article h2, article.post h1, article.project h1 {
     margin-bottom: 0;
 }
+.post-nav {
+    overflow: hidden;
+}
+.post-nav a[rel=prev] {
+    float: left;
+}
+.post-nav a[rel=next] {
+    float: right;
+}
 
+
+/* Comments */
+#comments ol {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5em;
+}
+.comment > div {
+    margin-bottom: 1.5em;
+}
+.comment-author img {
+    float: left;
+    margin-right: 10px;
+}
+.comment-body {
+    width: 323px;
+}
+.comment.bypostauthor > div {
+    background: #eee;
+}
+.children {
+    list-style: none;
+    padding-left: 37px;
+}
+.children .comment-body {
+    width: 286px;
+}
+span.says {
+    display: none;
+}
+
+
+/* Comment form */
+#commentform input {
+    display: block;
+}
 
 
 /* Button */
-.button {
+.button, #submit {
     
     
     font-size: 1.5em;
@@ -254,7 +299,7 @@ input[type=submit] {
 input[type=submit]::-moz-focus-inner {
 	border: none;  /* overrides extra padding in Firefox */
 }
-input[type=submit].button {
+input[type=submit].button, #submit {
     background: transparent url('../images/form-button.png') no-repeat scroll left top;
     padding: 9px;
     margin: 0 9px -2px 0;

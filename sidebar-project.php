@@ -21,5 +21,7 @@
         <?php endwhile; ?>
         <?php wp_reset_postdata(); ?>
         </ul>
+        
+        <a href="<?php echo home_url('/portfolio'); ?>">View complete portfolio</a>
     </li>
 </ul>

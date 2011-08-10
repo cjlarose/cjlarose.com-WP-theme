@@ -25,8 +25,8 @@ get_header(); ?>
     <?php $counter = 0; ?>
     <?php if ( $post_query->have_posts() ) while ( $post_query->have_posts() ) : $counter++; $post_query->the_post(); ?>
     <?php
-    global $more;
-    $more = 0;
+    //global $more;
+    //$more = 0;
     ?>
         <li class="span-8<?php echo ($counter % 3 == 0)?" last":""; ?>">
         <h3><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyten' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h3>

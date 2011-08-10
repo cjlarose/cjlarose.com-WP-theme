@@ -60,4 +60,16 @@
 
 <?php endif; // end have_comments() ?>
 
-<?php comment_form(); ?>
+<?php
+comment_form(array(
+		'label_submit' => __('Post'),
+		'fields' => apply_filters('comment_form_default_fields', array(
+	'author' => '<p class="comment-form-author">' . '<label for="author">' . __( 'Name' ) . '</label> ' . ( $req ? '<span class="required">*</span>' : '' ) .
+	            '<input class="text" id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' /*. $aria_req*/ . ' /></p>',
+	'email'  => '<p class="comment-form-email"><label for="email">' . __( 'Email' ) . '</label> ' . ( $req ? '<span class="required">*</span>' : '' ) .
+	            '<input class="text" id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' /*. $aria_req */. ' /></p>',
+	'url'    => '<p class="comment-form-url"><label for="url">' . __( 'Website' ) . '</label>' .
+	            '<input class="text" id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></p>',
+		))
+));
+?>
