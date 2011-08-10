@@ -67,7 +67,7 @@
 		
 		<div class="span-7 last">
 			<h3><a href="<?php echo home_url('/about-me'); ?>">About Chris</a></h3>
-			<p>Nam fermentum cursus urna vitae euismod. Maecenas non urna sit amet tellus ultricies tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse euismod commodo nibh ut ultrices. In eu purus non lacus ornare porttitor ac at justo. Aenean nec enim est, id ultrices orci. In rutrum urna lectus. </p>
+			<p>My name is Chris LaRose. I attend the University of Arizona in Tucson, Arizona, pursuing a degree in Computer Science. I&apos;ve been making websites for a few years now. After making quite a few websites for school projects, I&apos;m just beginning to freelance.</p>
 		</div>
 		
 	</div>
