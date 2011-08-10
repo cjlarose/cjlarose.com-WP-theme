@@ -19,7 +19,7 @@ get_header(); ?>
     </div>
     
     <div class="span-12 last">
-        <a href="http://localhost/wordpress/cjlarose/portfolio/">
+        <a href="<?php echo home_url('/portfolio'); ?>">
             <img src="<?php bloginfo('template_url'); ?>/images/amer-pat-preview.jpg" alt="Design thumbnail of the website for the American Patriot Party" />
         </a>
     </div>
