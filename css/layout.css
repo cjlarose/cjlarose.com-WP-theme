@@ -119,6 +119,8 @@ div {position: relative;}
     font-size: inherit !important;
 }
 
+
+
 /* Search form */
 #search-form label {
     display: none;
@@ -147,15 +149,15 @@ div {position: relative;}
 #ft .span-24 a {
     color: #6cf;
 }
-#footer-project-list {
+.project-thumb-list {
     margin: 0;
     padding: 0;
     list-style: none;
 }
-#footer-project-list li {
+.project-thumb-list li {
     margin-bottom: 10px;
 }
-#footer-project-list img {
+.project-thumb-list img {
     float: left;
 }
 #copyright {
@@ -290,6 +292,9 @@ label[for=basic], label[for=blog], label[for=full] {
 
 
 /* Portfolio */
+a[rel=lightbox]:hover {
+    border-width: 0;
+}
 #project-list {
     list-style: none;
     margin: 0;

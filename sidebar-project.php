@@ -7,7 +7,7 @@
                 'posts_per_page' => 10
         ));
         ?>
-        <ul id="footer-project-list">
+        <ul class="project-thumb-list">
         <?php $counter = 0; ?>
         <?php if ( $post_query->have_posts() ) while ( $post_query->have_posts() ) : $counter++; $post_query->the_post(); ?>
             <li class="span-4<?php echo ($counter % 2 == 0)?" last":""; ?>">
