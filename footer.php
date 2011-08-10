@@ -46,7 +46,7 @@
 			<?php
 				$post_query = new WP_Query(array(
 				'post_type' => 'project',
-				'posts_per_page' => 6
+				'posts_per_page' => 4
 			));
 			?>
 			<ul id="footer-project-list">
