@@ -4,11 +4,9 @@
 
 /* Basic Rules */
 body {
-    font-size: 87.5%;
-    line-height: 1.5;
-    font-family: GillSans, Calibri, Trebuchet, sans-serif;
     background-color: #afaa81;
     margin: 0;
+    font: 87.5%/1.5 GillSans, Calibri, Trebuchet, sans-serif;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -259,6 +257,12 @@ body.search-results article h2, article.post h1, article.project h1 {
 }
 span.says {
     display: none;
+}
+
+
+/* Forms */
+input, button {
+    font: 87.5%/1.5 GillSans, Calibri, Trebuchet, sans-serif;
 }
 
 
