@@ -49,7 +49,7 @@
 				'posts_per_page' => 4
 			));
 			?>
-			<ul class="project-thumb-list">
+			<ul class="project-thumb-list span-8 last">
 			<?php $counter = 0; ?>
 			<?php if ( $post_query->have_posts() ) while ( $post_query->have_posts() ) : $counter++; $post_query->the_post(); ?>
 			    <li class="span-4<?php echo ($counter % 2 == 0)?" last":""; ?>">
