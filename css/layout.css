@@ -134,11 +134,12 @@ div {position: relative;}
 }
 #search-submit {
     background: transparent url('../images/button-28.png') no-repeat scroll left top;
-    padding: 6px 6px 8px;
+    padding: 6px 0 8px;
     color: #fff;
     font-size: 14px;
-    margin-top: 6px;
+    margin-top: 7px;
     float: right;
+    width: 60px;
 }
 
 
