@@ -238,26 +238,31 @@ body.search-results article h2, article.post h1, article.project h1 {
 }
 .comment > div {
     margin-bottom: 1.5em;
-}
-.comment-author img {
-    float: left;
-    margin-right: 10px;
-}
-.comment-body {
-    width: 323px;
+    padding: 1.5em 37px;
 }
 .comment.bypostauthor > div {
     background: #eee;
 }
-.children {
-    list-style: none;
-    padding-left: 37px;
+.comment-author {
+    margin-bottom: 1.5em;
+    overflow: hidden;
 }
-.children .comment-body {
-    width: 286px;
+.comment-author img {
+    float: left;
+    margin-right: 10px;
+    margin-bottom: -1px;
+}
+cite {
+    font-size: 1.5em;
+    line-height: 2em;
+    font-style: normal;
 }
 span.says {
     display: none;
+}
+.children {
+    list-style: none;
+    padding-left: 37px;
 }
 
 

@@ -321,8 +321,8 @@ function twentyten_comment( $comment, $args, $depth ) {
 	
 		<div id="comment-<?php comment_ID(); ?>" class="clearfix">
 		
-		<div class="comment-author vcard span-6">
-			<?php echo get_avatar( $comment, 42 ); ?>
+		<div class="comment-author vcard">
+			<?php echo get_avatar( $comment, 64 ); ?>
 			<?php printf( __( '%s <span class="says">says:</span>', 'twentyten' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
 			
 			<div class="comment-meta commentmetadata"><a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
@@ -340,7 +340,7 @@ function twentyten_comment( $comment, $args, $depth ) {
 
 		
 
-		<div class="comment-body span-9 last">
+		<div class="comment-body">
 			<?php comment_text(); ?>
 			<div class="reply">
 				<?php comment_reply_link( array_merge( $args, array( 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
