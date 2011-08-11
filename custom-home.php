@@ -15,7 +15,7 @@ get_header(); ?>
         <?php the_content(); ?>
     
     <?php endwhile; ?>
-        <a class="button" href="<?php echo home_url('hire-me'); ?>">Hire me</a>
+        <a class="button" href="<?php echo home_url('/portfolio'); ?>">Check out my portfolio</a>
     </div>
     
     <div class="span-12 last">
