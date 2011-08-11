@@ -89,16 +89,21 @@ div {position: relative;}
 }
 #access li {
     float: left;
-    line-height: 63px;
     font-size: 1.25em;
-    padding-right: 1.5em;
 }
 #access li a {
     color: #ccc;
+    line-height: 63px;
+    display: block;
+    padding: 0 10px;
+}
+#access li:first-child a {
+    margin-left: -10px;
 }
 #access li a:hover {
     color: #fff;
-    border-bottom: 1px solid #fff;
+    background: #333;
+    border-width: 0;
 }
 #access li.current_page_item a {
     color: #fff;
@@ -265,11 +270,8 @@ span.says {
 
 /* Button */
 .button, #submit {
-    
-    
     font-size: 1.5em;
     display: inline-block;
-    
     color: #fff;
     position: relative;
     padding: 0 10px 0 19px;
@@ -290,15 +292,15 @@ a.button:hover {
     border: 0;
 }
 input[type=submit] { 
-	position: relative;
-	border: 0; 
-	padding: 0;
-	cursor: pointer;
-	overflow: visible; /* removes extra side padding in IE */
+    position: relative;
+    border: 0; 
+    padding: 0;
+    cursor: pointer;
+    overflow: visible; /* removes extra side padding in IE */
 }
 
 input[type=submit]::-moz-focus-inner {
-	border: none;  /* overrides extra padding in Firefox */
+    border: none;  /* overrides extra padding in Firefox */
 }
 input[type=submit].button, #submit {
     background: transparent url('../images/form-button.png') no-repeat scroll left top;
@@ -307,6 +309,8 @@ input[type=submit].button, #submit {
     line-height: 26px;
     width: 139px;
 }
+
+
 
 /* Hire me form */
 #wpcf7-f1-p10-o1 input.text {
@@ -357,12 +361,29 @@ a[rel=lightbox]:hover {
 }
 
 
+
+/* Lightbox hacks */
+#lightbox a {border: none;}
+#imageContainer {position: static;}
+
+
+
+
 /* Single-project */
 #visit-project {
    width: 98px;
 }
 .attachment-project-super {
     margin-bottom: 1.5em;
+}
+
+
+
+/* Stupid smiley from jetpack */
+img#wpstats {
+    width: 0px;
+    height: 0px;
+    overflow: hidden;
 }
 
 
