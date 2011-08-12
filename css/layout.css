@@ -153,6 +153,9 @@ div {position: relative;}
 #ft .span-24 a {
     color: #6cf;
 }
+#ft .span-24 a:hover {
+    border-bottom: 1px dotted #6cf;
+}
 .project-thumb-list {
     margin: 0;
     padding: 0;
@@ -382,6 +385,7 @@ a[rel=lightbox]:hover {
 /* Single-project */
 #visit-project {
    width: 98px;
+   margin-bottom: -2px;
 }
 .attachment-project-super {
     margin-bottom: 1.5em;
