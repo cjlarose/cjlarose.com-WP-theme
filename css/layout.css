@@ -30,6 +30,9 @@ div {position: relative;}
 .colborder {
     border-color: #ddd;
 }
+hr {
+    margin-bottom: 20px;
+}
 
 
 
@@ -408,7 +411,7 @@ img#wpstats {
 
 /* Vertical Ryythm Testing */
 .container.showgrid {
-    background: transparent url('blueprint/src/grid-878.png') repeat scroll 36px top !important;
+    background: transparent url('blueprint/src/grid.png') repeat scroll 36px top !important;
 }
 .showgrid #bd, .showgrid #ft, .showgrid #banner, .showgrid #from-my-blog {
     background: none !important;
