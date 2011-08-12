@@ -198,6 +198,9 @@ body.home #banner, body.home #from-my-blog {
 #banner h1 {
     margin-top: .75em;
 }
+#banner h1 strong {
+    color: #09f;
+}
 #banner img {
     float: left;
 }

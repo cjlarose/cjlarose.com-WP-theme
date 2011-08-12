@@ -10,7 +10,7 @@ get_header(); ?>
 
 <div id="banner" class="span-24">
     
-    <div class="span-11 colborder">
+    <div class="span-11 append-1">
     <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
         <?php the_content(); ?>
     
