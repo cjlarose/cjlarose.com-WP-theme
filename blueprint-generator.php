@@ -1,15 +1,9 @@
 <?php
 /**
- * The template for displaying all pages.
+ * Template Name: Blueprint Generator
  *
- * This is the template that displays all pages by default.
- * Please note that this is the wordpress construct of pages
- * and that other 'pages' on your wordpress site will use a
- * different template.
+ * Custom template for blueprint generator
  *
- * @package WordPress
- * @subpackage Starkers
- * @since Starkers 3.0
  */
 
 get_header(); ?>
@@ -36,6 +30,8 @@ get_header(); ?>
 </div>
 
 <div class="span-8 last">
-<?php get_sidebar(); ?>
+<?php
+echo do_shortcode('[include file="blueprintgenerator/index.php"]');
+?>
 </div>
 <?php get_footer(); ?>

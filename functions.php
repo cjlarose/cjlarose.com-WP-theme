@@ -576,3 +576,16 @@ function create_post_types() {
 	
 	*/
 }
+
+function include_tag_func($args) {
+	//return var_dump($args);
+	$file = dirname(ABSPATH) . "/" .$args['file'];
+	
+	ob_start();
+        include $file;
+        $contents = ob_get_contents();
+        ob_end_clean();
+	
+	return $contents;
+}
+add_shortcode('include ', 'include_tag_func');
