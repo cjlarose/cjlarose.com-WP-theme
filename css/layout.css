@@ -127,6 +127,40 @@ hr {
 
 
 
+/* Forms */
+input, button {
+    font: 87.5%/1.5 GillSans, Calibri, Trebuchet, sans-serif;
+}
+input[type=submit] {
+    font-size: 1.5em;
+    display: inline-block;
+    color: #fff;
+    position: relative;
+    text-align: center;
+    
+    background: transparent url('../images/form-button.png') no-repeat scroll left top;
+    padding: 9px;
+    margin: 0 9px -2px 0;
+    line-height: 26px;
+    width: 139px;
+
+    border: 0; 
+
+    cursor: pointer;
+    overflow: visible; /* removes extra side padding in IE */
+}
+
+input[type=submit]::-moz-focus-inner {
+    border: none;  /* overrides extra padding in Firefox */
+}
+textarea {
+    font-family: inherit;
+}
+input.text {
+    margin: 7px 0;
+}
+
+
 /* Search form */
 #search-form label {
     display: none;
@@ -239,12 +273,43 @@ body.search-results article h2, article.post h1, article.project h1 {
 }
 
 
+
+/* Comment form */
+.comment-form-author, .comment-form-email, .comment-form-url {
+    margin-bottom: 28px;
+}
+#commentform .text, #commentform textarea {
+    display: block;
+    width: 385px;
+}
+#commentform textarea {
+    height: 84px;
+    width: 533px;
+}
+.form-allowed-tags {
+    color: #666;
+    font-size: .75em;
+    line-height: 2em;
+    margin-bottom: 2em;
+}
+
+
 /* Comments */
 #comments ol {
-    list-style: none;
     padding: 0;
     margin: 0 0 1.5em;
 }
+#comments li {
+    list-style: none;
+}
+/*
+P = 52
+(7x-4)+(10x+3)+19 = 52
+7x+10x-4+3+19 = 52
+17x + 18 = 52
+17x = 34
+x = 2
+*/
 .comment > div {
     margin-bottom: 1.5em;
     padding: 1.5em 37px;
@@ -275,39 +340,7 @@ span.says {
 }
 
 
-/* Forms */
-input, button {
-    font: 87.5%/1.5 GillSans, Calibri, Trebuchet, sans-serif;
-}
-input[type=submit] {
-    font-size: 1.5em;
-    display: inline-block;
-    color: #fff;
-    position: relative;
-    text-align: center;
-    
-    background: transparent url('../images/form-button.png') no-repeat scroll left top;
-    padding: 9px;
-    margin: 0 9px -2px 0;
-    line-height: 26px;
-    width: 139px;
 
-    border: 0; 
-
-    cursor: pointer;
-    overflow: visible; /* removes extra side padding in IE */
-}
-
-input[type=submit]::-moz-focus-inner {
-    border: none;  /* overrides extra padding in Firefox */
-}
-
-
-
-/* Comment form */
-#commentform input {
-    display: block;
-}
 
 
 /* Button */
