@@ -374,6 +374,7 @@ a.button:hover {
 }
 #wpcf7-f1-p10-o1 textarea {
     height: 98px;
+    width: 531px;
 }
 #wpcf7-f1-p10-o1 #url {
     width: 531px;
@@ -398,6 +399,17 @@ a.button:hover {
     float: right;
     width: 525px;
 }
+
+
+
+
+/* Contact form */
+#wpcf7-f2-p138-o1 textarea {
+    width: 531px;
+    height: 210px;
+}
+
+
 
 
 /* Portfolio */
