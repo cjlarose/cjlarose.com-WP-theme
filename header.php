@@ -29,6 +29,7 @@
 <![endif]-->
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/images/favicon.ico" />
+<?php wp_enqueue_script("jquery"); ?>
 <?php
 	/* We add some JavaScript to pages with the comment form
 	 * to support sites with threaded comments (when in use).
@@ -43,6 +44,15 @@
 	 */
 	wp_head();
 ?>
+<?php
+global $post;
+//echo $post->post_name;
+if (file_exists(TEMPLATEPATH . '/scripts/' . $post->post_name . '.js')) :
+	$script_path = get_bloginfo('template_url') . '/scripts/' . $post->post_name . '.js';
+	//echo $script_path;
+?>
+<script type="text/javascript" src="<?php echo $script_path; ?>"></script>
+<?php endif; ?>
 </head>
 
 <body <?php body_class(); ?>>
