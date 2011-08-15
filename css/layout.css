@@ -280,6 +280,17 @@ body.search-results article h2, article.post h1, article.project h1 {
 
 
 
+
+/* Syntax highlighting */
+article.post .syntaxhighlighter {
+    margin: 0 0 1.5em 0 !important;
+}
+article.post .syntaxhighlighter .line {
+    line-height: 21px !important;
+}
+
+
+
 /* Comment form */
 .comment-form-author, .comment-form-email, .comment-form-url {
     margin-bottom: 28px;
@@ -308,14 +319,6 @@ body.search-results article h2, article.post h1, article.project h1 {
 #comments li {
     list-style: none;
 }
-/*
-P = 52
-(7x-4)+(10x+3)+19 = 52
-7x+10x-4+3+19 = 52
-17x + 18 = 52
-17x = 34
-x = 2
-*/
 .comment > div {
     margin-bottom: 1.5em;
     padding: 1.5em 37px;
