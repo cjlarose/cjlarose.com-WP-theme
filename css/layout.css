@@ -288,7 +288,9 @@ article.post .syntaxhighlighter {
 article.post .syntaxhighlighter .line {
     line-height: 21px !important;
 }
-
+article.post .syntaxhighlighter .toolbar {
+    display: none;
+}
 
 
 /* Comment form */
