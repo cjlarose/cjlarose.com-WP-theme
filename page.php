@@ -35,7 +35,7 @@ get_header(); ?>
 
 </div>
 
-<div class="span-8 last">
+<div class="span-6 last box">
 <?php get_sidebar(); ?>
 </div>
 <?php get_footer(); ?>

@@ -66,7 +66,7 @@ get_header(); ?>
 <?php endwhile; // end of the loop. ?>
 </div>
 
-<div class="span-8 last">
+<div class="span-6 box last">
 <?php get_sidebar('project'); ?>
 </div>
 <?php get_footer(); ?>

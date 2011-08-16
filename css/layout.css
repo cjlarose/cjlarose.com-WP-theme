@@ -6,11 +6,11 @@
 body {
     background-color: #afaa81;
     margin: 0;
-    font: 87.5%/1.5 GillSans, Calibri, Trebuchet, sans-serif;
+    font: 87.5%/1.5 'Shanti', GillSans, Calibri, Trebuchet, sans-serif;
 }
 
 h1,h2,h3,h4,h5,h6 {
-    font-family: Cambria, Georgia, Times, "Times New Roman", serif;
+    font-family: 'PT Serif', Cambria, Georgia, Times, "Times New Roman", serif;
 }
 h1 {font-size:2em; line-height: 1.5; margin-bottom:0.75em;}
 h2 {font-size:1.5em; line-height:1; margin-bottom:1em;}
@@ -96,7 +96,7 @@ hr {
 }
 #access li {
     float: left;
-    font-size: 1.25em;
+    font-size: 1.1em;
 }
 #access li a {
     color: #ccc;
@@ -168,21 +168,27 @@ input.text {
 
 
 /* Search form */
+#search-form {
+    position: relative;
+}
 #search-form label {
     display: none;
 }
 #search-form input.text {
-    width: 200px;
+    width: 180px;
     float: left;
+    padding-right: 25px;
 }
 #search-submit {
-    background: transparent url('../images/button-28.png') no-repeat scroll left top;
-    padding: 6px 0 8px;
-    color: #fff;
-    font-size: 14px;
-    margin-top: 7px;
-    float: right;
-    width: 60px;
+    background: transparent url('../images/search-submit.jpg') no-repeat scroll left top;
+    width: 20px;
+    height: 20px;
+    text-indent: -9999px;
+    position: absolute;
+    right: 5px;
+    top: 11px;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -265,7 +271,7 @@ body.home hr {
 .post-meta {
     color: #666;
 }
-body.search-results article h2, article.post h1, article.project h1 {
+body.search-results article h2, article.post h1, article.project h1, article.post h2 {
     margin-bottom: 0;
 }
 .post-nav {
@@ -446,7 +452,7 @@ a[rel=lightbox]:hover {
 #imageContainer {position: static;}
 
 
-
+.box {padding: 1.5em 37px}
 
 /* Single-project */
 #visit-project {

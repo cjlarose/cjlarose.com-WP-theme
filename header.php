@@ -21,6 +21,7 @@
 	wp_title( '|', true, 'right' );
 
 	?></title>
+<link href='http://fonts.googleapis.com/css?family=Shanti|PT+Serif' rel='stylesheet' type='text/css'>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="stylesheet" type="text/css" media="screen, projection" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/blueprint/print.css" type="text/css" media="print" />
