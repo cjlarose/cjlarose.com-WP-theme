@@ -459,10 +459,39 @@ a[rel=lightbox]:hover {
 
 
 /* Blueprint Generator */
-
-#bp-gen-form input.text {
-    width: 274px;
+#bp-gen-form {
+    margin-bottom: 17px;
 }
+#bp-gen-form input.text {
+    width: 30px;
+    margin-right: 5px;
+}
+#bp-gen-form #container-width {
+    margin-right: 5px;
+}
+#bp-gen-form input[type=submit] {
+
+}
+#grid-preview {
+    background: #fff;
+    width: 400px;
+    height: 4.5em;
+    
+    position: absolute;
+    left: 50%;
+    margin-left: -200px;
+}
+.grid-preview-col {
+    background: #9cf;
+    float: left;
+    height: 100%;
+    width: 20px;
+    margin-right: 10px;
+}
+.grid-preview-col.last {
+    margin-right: 0 !important;
+}
+
 
 
 /* Stupid smiley from jetpack */
