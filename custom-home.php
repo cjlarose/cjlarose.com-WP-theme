@@ -51,7 +51,7 @@ get_header(); ?>
         <?php wp_reset_postdata(); ?>
     </div>
     
-    <div class="span-8 last">
+    <div class="span-6 box last">
         <?php get_sidebar('home'); ?>
     </div>
     
