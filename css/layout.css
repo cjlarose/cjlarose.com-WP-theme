@@ -39,7 +39,7 @@ div {
 hr {
     margin-bottom: 20px;
 }
-
+.box {padding: 1.5em 37px}
 
 
 /* Basic Layout */
@@ -452,7 +452,7 @@ a[rel=lightbox]:hover {
 #imageContainer {position: static;}
 
 
-.box {padding: 1.5em 37px}
+
 
 /* Single-project */
 #visit-project {
@@ -461,6 +461,18 @@ a[rel=lightbox]:hover {
 }
 .attachment-project-super {
     margin-bottom: 1.5em;
+}
+
+.sidebar-project-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.sidebar-project-list li {
+    margin-bottom: 1.5em;
+}
+.sidebar-project-list img {
+    float: left;
 }
 
 
