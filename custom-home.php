@@ -28,9 +28,10 @@ get_header(); ?>
 <hr />
 <div id="from-my-blog" class="span-24">
     
-    <h2>From my blog</h2>
+   
     
     <div class="span-15 append-1">
+         <h2>From my blog</h2>
         <?php
         $post_query = new WP_Query(array(
             'post_type' => 'post',

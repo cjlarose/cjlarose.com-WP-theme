@@ -131,6 +131,18 @@ hr {
     font-size: 14px !important;
 }
 
+.widget-container ul {
+    padding: 0;
+}
+.widget-container li {
+    list-style: none;
+}
+.widget-container li:before {
+    content: '\00bb';
+    position: absolute;
+    margin-left: -1em;
+}
+
 
 
 /* Forms */
@@ -491,7 +503,6 @@ a[rel=lightbox]:hover {
 
 }
 #grid-preview {
-    background: #fff;
     width: 400px;
     height: 4.5em;
     
